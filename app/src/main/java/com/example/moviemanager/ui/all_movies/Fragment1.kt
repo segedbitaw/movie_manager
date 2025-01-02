@@ -1,11 +1,16 @@
 package com.example.moviemanager.ui.all_movies
 
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,6 +21,7 @@ import com.example.moviemanager.R
 import com.example.moviemanager.databinding.Fragment1Binding
 import com.example.moviemanager.ui.MovieViewModel
 
+@Suppress("DEPRECATION")
 class Fragment1 : Fragment() {
 
     private var _binding: Fragment1Binding? = null
@@ -27,7 +33,7 @@ class Fragment1 : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+               setHasOptionsMenu(true)
         //println("This is a message to the console 1111")
         _binding = Fragment1Binding.inflate(inflater, container, false)
         binding.AddBtn.setOnClickListener {
@@ -78,6 +84,25 @@ class Fragment1 : Fragment() {
         }
         ).attachToRecyclerView(binding.recyclerView)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.action_delete){
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setTitle("Confirm Delete")
+                .setMessage("Are you sure you want to delete all the items?")
+                .setPositiveButton("Yes") { p0, p1 ->
+                    viewModel.deleteAll()
+                    Toast.makeText(requireContext(),"Items Deleted", Toast.LENGTH_SHORT).show()
+                }.show()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
