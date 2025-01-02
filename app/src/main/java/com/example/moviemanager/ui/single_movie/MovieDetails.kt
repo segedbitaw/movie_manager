@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.moviemanager.R
-import com.example.moviemanager.ui.MovieFormViewModel
+import com.example.moviemanager.ui.MovieViewModel
 
 
 class MovieDetails : Fragment() {
 
-    private val viewModel: MovieFormViewModel by activityViewModels()
+    private val viewModel: MovieViewModel by activityViewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

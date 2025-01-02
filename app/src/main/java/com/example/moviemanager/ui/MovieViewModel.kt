@@ -7,8 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import com.example.moviemanager.data.model.Movie
 import com.example.moviemanager.data.repository.MovieRepository
 
-class MovieViewModel(application: Application)  : AndroidViewModel(application){
-
+class MovieViewModel(application: Application)  : AndroidViewModel(application)
+{
     private val repository = MovieRepository(application)
 
     val movies : LiveData<List<Movie>>? = repository.getMovies()
@@ -27,7 +27,6 @@ class MovieViewModel(application: Application)  : AndroidViewModel(application){
     fun deleteMovie(movie:Movie) {
         repository.deleteMovie(movie)
     }
-
     fun deleteAll() {
         repository.deleteAll()
     }

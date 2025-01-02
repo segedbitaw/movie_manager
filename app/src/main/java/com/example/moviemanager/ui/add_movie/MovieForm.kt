@@ -15,16 +15,14 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.moviemanager.R
 import com.example.moviemanager.data.model.Movie
-import com.example.moviemanager.data.model.ItemManager
 import com.example.moviemanager.databinding.FragmentMovieFormBinding
-import com.example.moviemanager.ui.MovieFormViewModel
 import com.example.moviemanager.ui.MovieViewModel
 
 class MovieForm : Fragment() {
     private var _binding :FragmentMovieFormBinding?=null
     private val binding get()  =_binding!!
 
-    private val viewModel: MovieFormViewModel by activityViewModels()
+    //private val viewModel: MovieFormViewModel by activityViewModels()
     private val viewModel1: MovieViewModel by activityViewModels()
 
     private var imageUri: Uri? = null

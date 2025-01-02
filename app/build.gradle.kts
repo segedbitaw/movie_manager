@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-
+    id("kotlin-kapt")
 }
 
 android {
@@ -40,9 +40,11 @@ android {
 }
 
 dependencies {
+
     val room_version = "2.6.1"
-    implementation ("androidx.room:room-runtime:$room_version")
-    annotationProcessor ("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room.room:compiler:$room_version")
+    implementation ("androidx.room:room-ktx:$room_version")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.5")
     implementation("androidx.navigation:navigation-ui:2.8.5")
@@ -56,5 +58,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation ("androidx.recyclerview:recyclerview:1.0.0")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 }
+
