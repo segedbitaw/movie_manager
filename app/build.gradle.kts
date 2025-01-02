@@ -8,9 +8,8 @@ android {
     namespace = "com.example.moviemanager"
     compileSdk = 35
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
-
     }
     defaultConfig {
         applicationId = "com.example.moviemanager"
@@ -40,24 +39,29 @@ android {
 }
 
 dependencies {
+    // Room dependencies
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
-    val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:$room_version")
-    kapt("androidx.room.room:compiler:$room_version")
-    implementation ("androidx.room:room-ktx:$room_version")
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    // Glide for image loading
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // Navigation components
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.5")
     implementation("androidx.navigation:navigation-ui:2.8.5")
+
+    // Core AndroidX dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
+
+    // Test dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 }
-

@@ -3,7 +3,7 @@ package com.example.moviemanager.data.localdb
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.moviemanager.data.model.Movie
-
+@Dao
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

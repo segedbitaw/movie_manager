@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviemanager.R
 import com.example.moviemanager.databinding.Fragment1Binding
@@ -55,7 +56,7 @@ class Fragment1 : Fragment() {
                     findNavController().navigate(R.id.action_fragment1_to_movieDetails2)
                 }
             })
-            binding.recyclerView.layoutManager = GridLayoutManager(requireContext(),2)
+            binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         }
 
         // ItemTouchHelper for swipe-to-remove functionality

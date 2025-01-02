@@ -49,21 +49,15 @@ class MovieForm : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-         super.onViewCreated(view, savedInstanceState)
+        super.onViewCreated(view, savedInstanceState)
 
     }
     private fun setupListeners() {
         binding.finishEdit.setOnClickListener {
-            //  update database, navigate back
             val movieTitle = binding.MovieTitle.text.toString()
             val movieDescription = binding.MovieDescription.text.toString()
             if (movieTitle.isNotEmpty() && movieDescription.isNotEmpty()) {
                 // Update ViewModel
-//                viewModel.setTitle(movieTitle)
-//                viewModel.setDescription(movieDescription)
-//                viewModel.setPosterUri(imageUri!!)
-//                viewModel.setYear(binding.MovieYear.text.toString())
-
                 // Create movie and save to list
                 val movie = Movie(
                     photo = imageUri.toString(),
@@ -71,16 +65,15 @@ class MovieForm : Fragment() {
                     description = movieDescription,
                     year = binding.MovieYear.text.toString()
                 )
-//                ItemManager.add(movie)
+                // Update ViewModel
                 viewModel1.addMovie(movie)
-
-                findNavController().navigate(R.id.action_movieForm_to_fragment12, bundleOf("movie" to movie))
+                findNavController().navigate(R.id.action_movieForm_to_fragment12)
             }
-            else {
-            Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-        }
-        }
 
+            else {
+                Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+        }
         binding.imageBtn.setOnClickListener {
             pickImageLauncher.launch(arrayOf("image/*"))
         }
