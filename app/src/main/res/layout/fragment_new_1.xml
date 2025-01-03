@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradiant_color">
+        android:background="@drawable/gradiant_color"
+        tools:context=".ui.all_movies.Fragment1">
 
 
     <TextView
-            android:id="@+id/tvHeadline"
+            android:id="@+id/textWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Movie Manager"
@@ -27,14 +29,14 @@
             android:layout_height="0dp"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/tvHeadline"
+            app:layout_constraintTop_toBottomOf="@id/textWelcome"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fabAddMovie" />
+            app:layout_constraintBottom_toTopOf="@id/Add_btn" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAddMovie"
+            android:id="@+id/Add_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="Add Movie"

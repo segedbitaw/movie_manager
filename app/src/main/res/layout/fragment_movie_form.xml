@@ -3,6 +3,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:padding="8dp"
         tools:context=".ui.add_movie.MovieForm"
@@ -13,7 +14,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher_round"
+            android:src="@drawable/moviepick"
             android:id="@+id/result_image"
             android:contentDescription="Movie image preview" />
 
@@ -24,7 +25,7 @@
             android:text="Pick Image"
             android:id="@+id/image_btn"
             android:textColor="@color/white"
-            android:backgroundTint="@color/blue"/>
+            android:backgroundTint="@color/gradintpurp"/>
 
     <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
@@ -113,9 +114,6 @@
 
 </LinearLayout>
 
-
-
-
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,7 +123,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:text="Finish"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/gradintpurp"
             android:textColor="@color/white"/>
 
 </LinearLayout>
