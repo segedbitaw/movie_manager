@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -28,32 +29,26 @@ class Fragment1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        //println("This is a message to the console 1111")
+
         _binding = Fragment1Binding.inflate(inflater, container, false)
         binding.AddBtn.setOnClickListener {
             findNavController().navigate(R.id.action_fragment1_to_movieForm)
-            println("This is a message to the console 222222")
         }
-        //println("This is a message to the console")
         return binding.root
-        //println("This is a message to the console 99999")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewModel.movies?.observe(viewLifecycleOwner) {
             binding.recyclerView.adapter = ItemAdapterFragment1(it, object : ItemAdapterFragment1.ItemListener  {
-
                 override fun onItemClicked(index: Int) {
-
-                    Toast.makeText(requireContext(),
-                        "${it[index]}", Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onItemLongClicked(index: Int) {
                     viewModel.setMovie(it[index])
                     findNavController().navigate(R.id.action_fragment1_to_movieDetails2)
+                }
+                override fun onItemLongClicked(index: Int) {
+                   viewModel.setMovie(it[index])
+                    findNavController().navigate(R.id.action_fragment1_to_movieForm)
+                    (binding.recyclerView.adapter as ItemAdapterFragment1).notifyItemChanged(index)
                 }
             })
             binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -71,8 +66,23 @@ class Fragment1 : Fragment() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val movie = (binding.recyclerView.adapter as ItemAdapterFragment1).itemAt(viewHolder.adapterPosition)
-                viewModel.deleteMovie(movie)
+                // Show a confirmation dialog before deleting
+                val builder = AlertDialog.Builder(requireContext())
+                builder.setTitle("Delete Movie")
+                    .setMessage("Are you sure you want to delete this movie?")
+                    .setPositiveButton("Yes") { dialog, which ->
+                        // User confirmed deletion, delete the movie
+                        viewModel.deleteMovie(movie)  // Call ViewModel to delete movie from the database
 
+                        // Notify the adapter that the item has been removed
+                        (binding.recyclerView.adapter as ItemAdapterFragment1).notifyItemRemoved(viewHolder.adapterPosition)
+                    }
+                    .setNegativeButton("No") { dialog, which ->
+                        // User canceled, so we restore the item back to its original position
+                        (binding.recyclerView.adapter as ItemAdapterFragment1).notifyItemChanged(viewHolder.adapterPosition)
+                    }
+                // Show the dialog
+                builder.create().show()
             }
 
         }

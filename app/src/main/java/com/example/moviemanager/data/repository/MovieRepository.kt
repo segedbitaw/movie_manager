@@ -2,6 +2,7 @@ package com.example.moviemanager.data.repository
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import com.example.moviemanager.data.localdb.MovieDao
 import com.example.moviemanager.data.localdb.MovieDataBase
 import com.example.moviemanager.data.model.Movie
@@ -23,6 +24,9 @@ class MovieRepository(application: Application): AndroidViewModel(application) {
 
     fun deleteMovie(movie: Movie) {
         movieDao?.deleteMovie(movie)
+    }
+    fun updateMovie(movie: Movie){
+        movieDao?.updateItem(movie)
     }
 
     fun getMovie(id:Int)  = movieDao?.getMovie(id)

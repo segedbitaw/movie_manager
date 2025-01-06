@@ -42,7 +42,7 @@ dependencies {
     // Room dependencies
     implementation("androidx.room:room-runtime:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
-
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
