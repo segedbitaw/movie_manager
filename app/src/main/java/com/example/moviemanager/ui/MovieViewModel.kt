@@ -1,4 +1,5 @@
 package com.example.moviemanager.ui
+
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -22,14 +23,9 @@ class MovieViewModel(application: Application)  : AndroidViewModel(application)
     fun addMovie(movie: Movie) {
         repository.addMovie(movie)
     }
-    fun updateMovie(movie : Movie){
-        repository.updateMovie(movie) // Update in Room database
-    }
 
     fun deleteMovie(movie:Movie) {
-
-        repository.deleteMovie(movie) // Perform the database operation
-
+        repository.deleteMovie(movie)
     }
     fun deleteAll() {
         repository.deleteAll()
