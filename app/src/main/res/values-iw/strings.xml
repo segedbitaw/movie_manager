@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Manager</string>
+    <string name="hello_blank_fragment">שלום</string>
+    <string name="add">להוסיף</string>
+    <string name="delete">למחוק</string>
+    <string name="edit">לערוך</string>
+    <string name="finish">סיום</string>
+    <string name="Add">להוסיף</string>
+    <string name="card_description">תיאור הסרט</string>
+    <string name="card_movie_release">שנת יציאה</string>
+    <string name="card_Movie_Title">כותרת הסרט</string>
+    <string name="frag1_App_name">מנהל סרטים</string>
+    <string name="frag1_add_movie_btn">להוסיף סרט</string>
+    <string name="movie_image_preview_form">ראיית התמונה</string>
+    <string name="pick_image_form">לבחור תמונה</string>
+    <string name="enter_movie_title_form">תוסיף את שם הסרט</string>
+    <string name="movie_description_form">תוסיף את תיאור הסרט</string>
+    <string name="movie_release_year_form">תוסיף שנת יציאה של הסרט</string>
+    <string name="famous_actor_form">תוסיף שחקן מפורסם</string>
+    <string name="rating_form">דירוג</string>
+    <string name="finish_form">סיום</string>
+</resources>
