@@ -13,11 +13,12 @@
             android:id="@+id/textWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Manager"
+            android:text="@string/frag1_App_name"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:padding="16dp"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -32,14 +33,15 @@
             app:layout_constraintTop_toBottomOf="@id/textWelcome"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/Add_btn" />
-
+            app:layout_constraintBottom_toTopOf="@id/Add_btn"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/Add_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Add Movie"
+            android:contentDescription="@string/frag1_add_movie_btn"
             android:src="@drawable/baseline_add_24"
             app:tint="@color/white"
             app:backgroundTint="@color/dark_red"
