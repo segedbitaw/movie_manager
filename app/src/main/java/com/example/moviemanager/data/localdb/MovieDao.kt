@@ -13,7 +13,7 @@ interface MovieDao {
     fun deleteMovie(vararg  items:Movie)
 
     @Update
-    fun updateItem(item: Movie)
+    fun updatedMovie(updatedMovie: Movie)
 
     @Query("SELECT * FROM movies ORDER BY movie_name ASC")
     fun getMovies() : LiveData<List<Movie>>

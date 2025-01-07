@@ -78,10 +78,10 @@
             android:layout_marginTop="4dp">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/movie_genre"
+                android:id="@+id/Famous_Actor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter movie genre"
+                android:hint="Enter Famous Actor"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -125,7 +125,7 @@
             android:id="@+id/finish_edit"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Save"
+            android:text="Finish"
             android:backgroundTint="@color/blue"
             android:textColor="@color/white" />
 

@@ -14,7 +14,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:padding="30dp"
-        android:text="Welcome to Cinema"
+        android:text="Movie Manager"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -44,23 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:contentDescription="@string/Add"
-            android:src="@drawable/baseline_add_24" />
+            android:src="@drawable/baseline_add_24"/>
 
-        <Button
-            android:id="@+id/buttonDelete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/delete"
-            android:padding="8dp" />
-
-        <Button
-            android:id="@+id/buttonFinish"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/finish"
-            android:padding="8dp" />
     </LinearLayout>
 
 </FrameLayout>
