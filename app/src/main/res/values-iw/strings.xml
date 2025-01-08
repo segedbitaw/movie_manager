@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Movie Manager</string>
+    <string name="app_name">מנהל סרטים</string>
     <string name="hello_blank_fragment">שלום</string>
     <string name="add">להוסיף</string>
     <string name="delete">למחוק</string>

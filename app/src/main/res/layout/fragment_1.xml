@@ -11,14 +11,18 @@
 
     <TextView
             android:id="@+id/textWelcome"
+            android:shadowColor="#80000000"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/frag1_App_name"
-            android:textSize="24sp"
+            android:layout_marginTop="18dp"
+            android:textSize="35sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:padding="16dp"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
