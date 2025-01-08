@@ -36,10 +36,10 @@ class MovieDetails : Fragment() {
         viewModel.chosenMovie.observe(viewLifecycleOwner) {
             if (viewModel.chosenMovie.value != null) {
                 binding.itemTitle.setText(it?.title)
-                binding.itemDesc.setText(it?.description)
-                binding.itemYear.setText(it?.year)
-                binding.itemGenre.setText(it?.genre)
-                binding.ratingBar.rating = it?.stars ?: 0.0f // Provide default value if null
+                binding.itemDesc?.setText(it?.description)
+                binding.itemYear?.setText(it?.year)
+                binding.itemGenre?.setText(it?.genre)
+                binding.ratingBar?.rating = it?.stars ?: 0.0f // Provide default value if null
                 Glide.with(requireContext()).load(it?.photo).circleCrop()
                     .into(binding.itemImage)
                 viewModel.clearChosenMovie()

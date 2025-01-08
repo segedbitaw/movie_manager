@@ -7,8 +7,8 @@
     <string name="edit">Edit</string>
     <string name="finish">Finish</string>
     <string name="Add">Add</string>
-    <string name="card_description">Item detailed description</string>
-    <string name="card_movie_release">movie release year</string>
+    <string name="card_description">Press for more details</string>
+    <string name="card_movie_release">Movie release year</string>
     <string name="card_Movie_Title">Main item title</string>
     <string name="frag1_App_name">Movie Manager</string>
     <string name="frag1_add_movie_btn">Add Movie</string>
@@ -17,7 +17,7 @@
     <string name="enter_movie_title_form">Enter Movie Title</string>
     <string name="movie_description_form">Enter Movie Description</string>
     <string name="movie_release_year_form">Enter Movie Release Year</string>
-    <string name="famous_actor_form">Enter Famous Actor</string>
     <string name="rating_form">Rating:</string>
     <string name="finish_form">Finish</string>
+    <string name="enter_movie_genre_form">Enter Movie Genre</string>
 </resources>

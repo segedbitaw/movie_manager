@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -9,6 +16,7 @@
         tools:context=".ui.add_movie.MovieForm"
         android:id="@+id/movie_form"
         android:background="@drawable/gradiant_color">
+
 
     <ImageView
             android:layout_width="100dp"
@@ -78,10 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp">
     <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Famous_Actor"
+            android:id="@+id/MovieGenre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/famous_actor_form"
+            android:hint="@string/enter_movie_genre_form"
             android:background="@drawable/gradiant_color_bluish"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +118,8 @@
             android:rating="5"
             android:layout_margin="8dp"
             android:scaleX="0.8"
-            android:scaleY="0.8" />
+            android:scaleY="0.8"
+            android:isIndicator="false"/>
 
 </LinearLayout>
 
@@ -127,3 +136,5 @@
             android:textColor="@color/white"/>
 
 </LinearLayout>
+
+</ScrollView>

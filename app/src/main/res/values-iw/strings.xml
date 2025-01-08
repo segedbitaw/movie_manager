@@ -17,7 +17,7 @@
     <string name="enter_movie_title_form">תוסיף את שם הסרט</string>
     <string name="movie_description_form">תוסיף את תיאור הסרט</string>
     <string name="movie_release_year_form">תוסיף שנת יציאה של הסרט</string>
-    <string name="famous_actor_form">תוסיף שחקן מפורסם</string>
     <string name="rating_form">דירוג</string>
     <string name="finish_form">סיום</string>
+    <string name="enter_movie_genre_form">תוסיף את ז\'אנר הסרט</string>
 </resources>

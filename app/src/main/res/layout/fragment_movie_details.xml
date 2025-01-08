@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/gradiant_color_yellowish"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:padding="10dp"
+        xmlns:tools="http://schemas.android.com/tools"
         tools:context=".ui.single_movie.MovieDetails"
-        android:padding="30dp">
+        android:id="@+id/movie_details"
+        android:background="#cacb">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="30dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/gradiant_color_cardcolor">
-            
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/item_image"/>
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_title"
-                    android:gravity="center"
+                    android:hint="Title: "
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
                     android:textSize="30sp"
                     android:layout_margin="10dp"
                     android:textStyle="bold"/>
@@ -32,42 +42,64 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_description"
-                    android:gravity="center"
-                    android:textSize="30sp"
+                    android:id="@+id/item_desc"
+                    android:hint="Description:"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="25sp"
                     android:layout_margin="10dp"
                     android:textStyle="italic"/>
-
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_release"
-                    android:gravity="center"
-                    android:textSize="30sp"
+                    android:id="@+id/item_year"
+                    android:hint="Year:"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="25sp"
                     android:layout_margin="10dp"
                     android:textStyle="italic"/>
-
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_actor"
-                    android:gravity="center"
-                    android:textSize="30sp"
+                    android:id="@+id/item_genre"
+                    android:hint="Genre:"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="25sp"
                     android:layout_margin="10dp"
                     android:textStyle="italic"/>
-
-            <ImageView
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="15dp"
-                    android:id="@+id/item_image">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
-            </ImageView>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Rating:"
+                        android:textSize="25sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp" />
 
-            
+
+                <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"
+                        android:layout_margin="8dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:isIndicator="true"/>
+
+            </LinearLayout>
         </LinearLayout>
-
+        </ScrollView>
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
