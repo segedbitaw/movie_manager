@@ -20,4 +20,9 @@
     <string name="rating_form">דירוג</string>
     <string name="finish_form">סיום</string>
     <string name="enter_movie_genre_form">תוסיף את ז\'אנר הסרט</string>
+    <string name="movie_title_details">כותרת:</string>
+    <string name="move_description_details">תיאור:</string>
+    <string name="year_movie_details">שנת יציאה:</string>
+    <string name="genre_movie_details">קטגוריה:</string>
+    <string name="rating_movie_details">דירוג:</string>
 </resources>

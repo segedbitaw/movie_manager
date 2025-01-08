@@ -116,6 +116,8 @@
             android:numStars="5"
             android:stepSize="1"
             android:rating="5"
+            android:progressTint="@color/yellow"
+            android:progressBackgroundTint="@color/black"
             android:layout_margin="8dp"
             android:scaleX="0.8"
             android:scaleY="0.8"
