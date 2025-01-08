@@ -30,4 +30,8 @@ class MovieRepository(application: Application): AndroidViewModel(application) {
     fun deleteAll() {
         movieDao?.deleteAll()
     }
+
+    fun updateMovie(updatedMovie: Movie) {
+        movieDao?.updatedMovie(updatedMovie)
+    }
 }

@@ -13,7 +13,7 @@ class ItemAdapterFragment1( val items: List<Movie>, val callBack: ItemListener)
 
     interface ItemListener {
         fun onItemClicked(index:Int)
-        fun onItemLongClicked(index:Int)
+        fun onItemLongClicked(index: Int)
     }
 
     inner class ItemViewHolder(private val binding: CardForFirstFragmentBinding) :
@@ -34,7 +34,7 @@ class ItemAdapterFragment1( val items: List<Movie>, val callBack: ItemListener)
 
         fun bind(item: Movie) {
             binding.itemTitle.text = item.title
-            binding.itemDescription.text = item.description
+//            binding.itemDescription.text = item.description
             binding.itemYear.text = item.year
             Glide.with(binding.root).load(item.photo).circleCrop().into(binding.itemImage)
         }

@@ -11,8 +11,12 @@ data class Movie(
     val title: String,
     @ColumnInfo(name = "movie_desc")
     val description: String,
+    @ColumnInfo(name = "movie_genre")
+    val genre: String,
     @ColumnInfo(name = "realese_year")
     val year: String,
+    @ColumnInfo(name = "rating")
+    val stars: Float,
     @ColumnInfo(name = "movie_poster")
     val photo: String?
 ) {
@@ -20,22 +24,3 @@ data class Movie(
     var id : Int = 0
 }
 
-
-object ItemManager {
-    val items: MutableList<Movie> = mutableListOf()
-
-    fun add(item: Movie) {
-        items.add(item)
-    }
-
-    fun remove(index: Int) {
-        if (index in items.indices) {
-            items.removeAt(index)
-        } else {
-            throw IndexOutOfBoundsException("Index $index is out of bounds for the item list.")
-        }
-    }
-    fun update(position: Int, updatedItem: Movie) {
-        items[position] = updatedItem
-    }
-}
