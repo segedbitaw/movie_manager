@@ -1,18 +1,28 @@
 <resources>
     <string name="app_name">Movie Manager</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Add</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
     <string name="finish">Finish</string>
     <string name="Add">Add</string>
-    <string name="item_title">Movie Title</string>
-    <string name="movie_year">Movie release year</string>
-    <string name="app_title">Movie Manager</string>
-    <string name="image_selector">Pick Image</string>
-    <string name="movie_title_hint">Enter Movie Title</string>
-    <string name="movie_description_hint">Enter Movie Description</string>
-    <string name="movie_release_year_hint">Enter Movie Release Year</string>
-    <string name="movie_genre_hint">Enter movie genre</string>
-    <string name="rating_hint">Rating:</string>
-    <string name="save">Save</string>
+    <string name="card_description">Press for more details</string>
+    <string name="card_movie_release">Movie release year</string>
+    <string name="card_Movie_Title">Main item title</string>
+    <string name="frag1_App_name">Movie Manager</string>
+    <string name="frag1_add_movie_btn">Add Movie</string>
+    <string name="movie_image_preview_form">Movie image preview</string>
+    <string name="pick_image_form">Pick Image</string>
+    <string name="enter_movie_title_form">Enter Movie Title</string>
+    <string name="movie_description_form">Enter Movie Description</string>
+    <string name="movie_release_year_form">Enter Movie Release Year</string>
+    <string name="rating_form">Rating:</string>
+    <string name="finish_form">Finish</string>
+    <string name="enter_movie_genre_form">Enter Movie Genre</string>
+    <string name="movie_title_details">Title:</string>
+    <string name="move_description_details">Description:</string>
+    <string name="year_movie_details">Year:</string>
+    <string name="genre_movie_details">Genre:</string>
+    <string name="rating_movie_details">Rating:</string>
 </resources>

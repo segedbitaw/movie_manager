@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -9,22 +15,23 @@
         android:id="@+id/movie_form"
         android:background="@drawable/gradiant_color">
 
+
     <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher_round"
+            android:src="@drawable/moviepick"
             android:id="@+id/result_image"
-            android:contentDescription="Movie image preview" />
+            android:contentDescription="@string/movie_image_preview_form" />
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Pick Image"
+            android:text="@string/pick_image_form"
             android:id="@+id/image_btn"
             android:textColor="@color/white"
-            android:backgroundTint="@color/blue" />
+            android:backgroundTint="@color/gradintpurp" />
 
     <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
@@ -35,7 +42,7 @@
                 android:id="@+id/MovieTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Title"
+                android:hint="@string/enter_movie_title_form"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,7 +57,7 @@
                 android:id="@+id/MovieDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Description"
+                android:hint="@string/movie_description_form"
                 tools:ignore="TouchTargetSizeCheck"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
@@ -66,7 +73,7 @@
                 android:id="@+id/MovieYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Release Year"
+                android:hint="@string/movie_release_year_form"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -78,10 +85,10 @@
             android:layout_marginTop="4dp">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Famous_Actor"
+                android:id="@+id/MovieGenre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Famous Actor"
+                android:layout_height="44dp"
+                android:hint="@string/enter_movie_genre_form"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -97,7 +104,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Rating:"
+                android:hint="@string/rating_form"
                 android:textSize="25sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="8dp" />
@@ -116,7 +123,6 @@
 
     </LinearLayout>
 
-
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,8 +131,11 @@
             android:id="@+id/finish_edit"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Finish"
-            android:backgroundTint="@color/blue"
+            android:text="@string/finish_form"
+            android:backgroundTint="@color/gradintpurp"
             android:textColor="@color/white" />
 
+
 </LinearLayout>
+
+</ScrollView>

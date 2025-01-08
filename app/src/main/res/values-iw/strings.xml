@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">מנהל סרטים</string>
-    <string name="delete">מחק</string>
-    <string name="edit">ערוך</string>
-    <string name="finish">שמור</string>
-    <string name="Add">הוספה</string>
-    <string name="item_title">שם הסרט</string>
-    <string name="movie_year">שנת הוצאה</string>
-    <string name="app_title">מנהל סרטים</string>
-    <string name="image_selector">בחר תמונה</string>
-    <string name="movie_title_hint">הכנס שם הסרט</string>
-    <string name="movie_description_hint">הכנס תיאור הסרט</string>
-    <string name="movie_release_year_hint">הכנס שנת הוצאה</string>
-    <string name="movie_genre_hint">הכנס ג\'אנר</string>
-    <string name="rating_hint">דירוג : </string>
-    <string name="save">שמור</string>
+    <string name="app_name">Movie Manager</string>
+    <string name="hello_blank_fragment">שלום</string>
+    <string name="add">להוסיף</string>
+    <string name="delete">למחוק</string>
+    <string name="edit">לערוך</string>
+    <string name="finish">סיום</string>
+    <string name="Add">להוסיף</string>
+    <string name="card_description">תיאור הסרט</string>
+    <string name="card_movie_release">שנת יציאה</string>
+    <string name="card_Movie_Title">כותרת הסרט</string>
+    <string name="frag1_App_name">מנהל סרטים</string>
+    <string name="frag1_add_movie_btn">להוסיף סרט</string>
+    <string name="movie_image_preview_form">ראיית התמונה</string>
+    <string name="pick_image_form">לבחור תמונה</string>
+    <string name="enter_movie_title_form">תוסיף את שם הסרט</string>
+    <string name="movie_description_form">תוסיף את תיאור הסרט</string>
+    <string name="movie_release_year_form">תוסיף שנת יציאה של הסרט</string>
+    <string name="rating_form">דירוג</string>
+    <string name="finish_form">סיום</string>
+    <string name="enter_movie_genre_form">תוסיף את ז\'אנר הסרט</string>
+    <string name="movie_title_details">כותרת:</string>
+    <string name="move_description_details">תיאור:</string>
+    <string name="year_movie_details">שנת יציאה:</string>
+    <string name="genre_movie_details">קטגוריה:</string>
+    <string name="rating_movie_details">דירוג:</string>
 </resources>

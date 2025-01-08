@@ -58,7 +58,7 @@ class MovieForm : Fragment() {
                 binding.MovieTitle.setText(it?.title)
                 binding.MovieDescription.setText(it?.description)
                 binding.MovieYear.setText(it?.year)
-                binding.movieGenre?.setText(it?.genre)
+                binding.MovieGenre.setText(it?.genre)
                 binding.ratingBar.rating = it?.stars ?: 0.0f // Provide default value if null
                 Glide.with(requireContext()).load(it?.photo).circleCrop()
                     .into(binding.resultImage)
@@ -78,7 +78,7 @@ class MovieForm : Fragment() {
                     title = movieTitle,
                     description = movieDescription,
                     year = binding.MovieYear.text.toString(),
-                    genre = binding.movieGenre?.text.toString(),
+                    genre = binding.MovieGenre.text.toString(),
                     stars = binding.ratingBar.rating
                 )
                 // Update ViewModel
@@ -87,16 +87,14 @@ class MovieForm : Fragment() {
                 } else{
                     movie.id = viewModel1.chosenMovie.value?.id?: 0
                     viewModel1.updateMovie(movie)
+
                 }
                 findNavController().navigate(R.id.action_movieForm_to_fragment12)
             }
             else {
                 Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
-//            binding.MovieTitle.text?.clear()
-//            binding.MovieDescription.text?.clear()
-//            binding.MovieYear.text?.clear()
-//            binding.resultImage.setImageDrawable(null)
+
         }
         binding.imageBtn.setOnClickListener {
             pickImageLauncher.launch(arrayOf("image/*"))

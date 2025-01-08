@@ -7,35 +7,35 @@
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".ui.single_movie.MovieDetails"
         android:id="@+id/movie_details"
-        android:background="@drawable/gradiant_color">
+        android:background="#cacb">
+
+
+
+
 
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="20dp">
-        <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradiant_color">
+
+
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
             <ImageView
                     android:layout_margin="15dp"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="300dp"
                     android:id="@+id/item_image"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_title"
-                    android:text="@string/movie_title_details"
-                    android:textColor="@color/black"
+                    android:hint="Title: "
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:textSize="30sp"
@@ -46,8 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_desc"
-                    android:text="@string/move_description_details"
-                    android:textColor="@color/black"
+                    android:hint="Description:"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:textSize="25sp"
@@ -57,8 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_year"
-                    android:text="@string/year_movie_details"
-                    android:textColor="@color/black"
+                    android:hint="Year:"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:textSize="25sp"
@@ -68,8 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_genre"
-                    android:text="@string/genre_movie_details"
-                    android:textColor="@color/black"
+                    android:hint="Genre:"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:textSize="25sp"
@@ -85,8 +82,7 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/rating_movie_details"
-                        android:textColor="@color/black"
+                        android:hint="Rating:"
                         android:textSize="25sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="8dp" />
@@ -96,19 +92,16 @@
                         android:id="@+id/ratingBar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:progressTint="@color/yellow"
-                        android:progressBackgroundTint="@color/black"
                         android:numStars="5"
                         android:stepSize="1"
                         android:rating="5"
                         android:layout_margin="8dp"
                         android:scaleX="0.8"
-                        android:scaleY="0.8"
-                        android:isIndicator="true"/>
+                        android:scaleY="0.8" />
 
             </LinearLayout>
         </LinearLayout>
-        </ScrollView>
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
