@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Pick Image"
+            android:text="@string/image_selector"
             android:id="@+id/image_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/blue" />
@@ -35,7 +35,7 @@
                 android:id="@+id/MovieTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Title"
+                android:hint="@string/movie_title_hint"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,7 +50,7 @@
                 android:id="@+id/MovieDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Description"
+                android:hint="@string/movie_description_hint"
                 tools:ignore="TouchTargetSizeCheck"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
@@ -66,7 +66,7 @@
                 android:id="@+id/MovieYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Movie Release Year"
+                android:hint="@string/movie_release_year_hint"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +81,7 @@
                 android:id="@+id/movie_genre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter movie genre"
+                android:hint="@string/movie_genre_hint"
                 android:background="@drawable/gradiant_color_bluish"
                 android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -97,7 +97,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Rating:"
+                android:hint="@string/rating_hint"
                 android:textSize="25sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="8dp" />
@@ -125,7 +125,7 @@
             android:id="@+id/finish_edit"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="Save"
+            android:text="@string/save"
             android:backgroundTint="@color/blue"
             android:textColor="@color/white" />
 

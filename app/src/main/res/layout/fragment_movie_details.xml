@@ -20,16 +20,16 @@
                 android:orientation="vertical">
 
             <ImageView
-                    android:layout_margin="15dp"
+                    android:layout_margin="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:id="@+id/item_image"/>
+                    android:id="@+id/item_image" />
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/item_title"
-                    android:hint="Title:"
+                    android:hint="Title: "
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:textSize="30sp"
@@ -66,8 +66,9 @@
                     android:textSize="25sp"
                     android:layout_margin="10dp"
                     android:textStyle="italic"/>
+
             <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:orientation="horizontal"

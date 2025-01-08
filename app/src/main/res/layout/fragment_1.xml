@@ -14,8 +14,8 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:padding="30dp"
-        android:text="Movie Manager"
-        android:textSize="18sp"
+        android:text="@string/app_title"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="388dp"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:nestedScrollingEnabled="true"
             android:layout_weight="1" />

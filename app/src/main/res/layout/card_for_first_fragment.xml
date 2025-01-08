@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardUseCompatPadding="true"
-        app:contentPadding="8dp"
+        app:contentPadding="6dp"
         app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="@color/material_dynamic_tertiary10"
-        >
+        app:cardBackgroundColor="@color/material_dynamic_tertiary10">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -24,34 +22,36 @@
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="40sp">
+                android:layout_marginStart="40sp"
+                android:gravity="center_horizontal">
 
             <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Main item title"
-                    android:layout_marginTop="4dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/item_title"
+                    android:layout_marginTop="6dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:id="@+id/itemTitle"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
-<!--            <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:id="@+id/itemDescription"-->
-<!--                    android:text="Item detailed description"-->
-<!--                    android:layout_marginTop="6dp"/>-->
+            <!--            <TextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:textSize="18sp"-->
+            <!--                    android:id="@+id/itemDescription"-->
+            <!--                    android:text="Item detailed description"-->
+            <!--                    android:layout_marginTop="6dp"/>-->
             <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textSize="18sp"
                     android:id="@+id/itemYear"
-                    android:text="movie release year"
-                    android:layout_marginTop="15dp"/>
+                    android:textColor="@color/white"
+                    android:text="@string/movie_year"
+                    android:layout_marginTop="8dp" />
 
         </LinearLayout>
     </LinearLayout>

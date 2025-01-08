@@ -62,6 +62,7 @@ class MovieForm : Fragment() {
                 binding.ratingBar.rating = it?.stars ?: 0.0f // Provide default value if null
                 Glide.with(requireContext()).load(it?.photo).circleCrop()
                     .into(binding.resultImage)
+                viewModel1.clearChosenMovie()
             }
         }
 
@@ -86,7 +87,6 @@ class MovieForm : Fragment() {
                 } else{
                     movie.id = viewModel1.chosenMovie.value?.id?: 0
                     viewModel1.updateMovie(movie)
-                    viewModel1.clearChosenMovie()
                 }
                 findNavController().navigate(R.id.action_movieForm_to_fragment12)
             }
