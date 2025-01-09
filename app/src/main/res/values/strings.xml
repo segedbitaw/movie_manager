@@ -18,9 +18,15 @@
     <string name="rating_form">Rating:</string>
     <string name="finish_form">Finish</string>
     <string name="enter_movie_genre_form">Enter Movie Genre</string>
-    <string name="movie_title_details">Title:</string>
-    <string name="move_description_details">Description:</string>
-    <string name="year_movie_details">Year:</string>
-    <string name="genre_movie_details">Genre:</string>
-    <string name="rating_movie_details">Rating:</string>
+    <string name="movie_title_details">Title: </string>
+    <string name="move_description_details">Description: </string>
+    <string name="year_movie_details">Year: </string>
+    <string name="genre_movie_details">Genre: </string>
+    <string name="rating_movie_details">Rating: </string>
+    <string name="delete_movie_title">Delete Movie</string>
+    <string name="delete_movie_message">Are you sure you want to delete this movie?</string>
+    <string name="delete_movie_positive">Yes</string>
+    <string name="delete_movie_negative">No</string>
+    <string name="movie_deleted_toast">Movie deleted</string>
+    <string name="filling_toast">Please fill in all fields</string>
 </resources>

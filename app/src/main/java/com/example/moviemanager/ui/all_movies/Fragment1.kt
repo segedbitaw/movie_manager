@@ -77,17 +77,17 @@ class Fragment1 : Fragment() {
                 val movie = (binding.recyclerView.adapter as ItemAdapterFragment1).itemAt(viewHolder.adapterPosition)
                 // Show delete confirmation dialog
                 val builder = AlertDialog.Builder(requireContext())
-                builder.setTitle("Delete Movie")
-                builder.setMessage("Are you sure you want to delete this movie?")
+                builder.setTitle(R.string.delete_movie_title)
+                builder.setMessage(R.string.delete_movie_message)
 
                 // Positive button - Delete movie
-                builder.setPositiveButton("Yes") { _, _ ->
+                builder.setPositiveButton(R.string.delete_movie_positive) { _, _ ->
                     viewModel.deleteMovie(movie)
-                    Toast.makeText(context, "Movie deleted", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.movie_deleted_toast, Toast.LENGTH_SHORT).show()
                 }
 
                 // Negative button - Cancel (undo swipe action)
-                builder.setNegativeButton("No") { dialog, _ ->
+                builder.setNegativeButton(R.string.delete_movie_negative) { dialog, _ ->
                     // Revert the swipe action by notifying the adapter
                     (binding.recyclerView.adapter as ItemAdapterFragment1).notifyItemChanged(viewHolder.adapterPosition)
                     dialog.dismiss()  // Dismiss the dialog

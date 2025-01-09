@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">מנהל סרטים</string>
-    <string name="hello_blank_fragment">שלום</string>
     <string name="add">להוסיף</string>
     <string name="delete">למחוק</string>
     <string name="edit">לערוך</string>
@@ -20,9 +19,15 @@
     <string name="rating_form">דירוג</string>
     <string name="finish_form">סיום</string>
     <string name="enter_movie_genre_form">תוסיף את ז\'אנר הסרט</string>
-    <string name="movie_title_details">כותרת:</string>
-    <string name="move_description_details">תיאור:</string>
-    <string name="year_movie_details">שנת יציאה:</string>
-    <string name="genre_movie_details">קטגוריה:</string>
-    <string name="rating_movie_details">דירוג:</string>
+    <string name="movie_title_details">כותרת: </string>
+    <string name="move_description_details">תיאור: </string>
+    <string name="year_movie_details">שנת יציאה: </string>
+    <string name="genre_movie_details">קטגוריה: </string>
+    <string name="rating_movie_details">דירוג: </string>
+    <string name="delete_movie_title">מחיקת סרט</string>
+    <string name="delete_movie_message">בטוח שאתה רוצה למחוק את הסרט?</string>
+    <string name="delete_movie_positive">כן</string>
+    <string name="delete_movie_negative">לא</string>
+    <string name="movie_deleted_toast">הסרט נמחק</string>
+    <string name="filling_toast">אנא מלאו את כל השדות</string>
 </resources>

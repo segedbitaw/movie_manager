@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -22,12 +21,8 @@ import com.example.moviemanager.ui.MovieViewModel
 class MovieForm : Fragment() {
     private var _binding :FragmentMovieFormBinding?=null
     private val binding get()  =_binding!!
-
-    //private val viewModel: MovieFormViewModel by activityViewModels()
     private val viewModel1: MovieViewModel by activityViewModels()
-
     private var imageUri: Uri? = null
-
     val pickImageLauncher : ActivityResultLauncher<Array<String>> = registerForActivityResult(
         ActivityResultContracts.OpenDocument()){
         binding.resultImage.setImageURI(it)
@@ -62,19 +57,20 @@ class MovieForm : Fragment() {
                 binding.ratingBar.rating = it?.stars ?: 0.0f // Provide default value if null
                 Glide.with(requireContext()).load(it?.photo).circleCrop()
                     .into(binding.resultImage)
-                viewModel1.clearChosenMovie()
             }
         }
 
     }
     private fun setupListeners() {
+
         binding.finishEdit.setOnClickListener {
             val movieTitle = binding.MovieTitle.text.toString()
             val movieDescription = binding.MovieDescription.text.toString()
             if (movieTitle.isNotEmpty() && movieDescription.isNotEmpty()) {
                 // Create movie and save to list
+                val movieImageUri = imageUri?.toString() ?: viewModel1.chosenMovie.value?.photo
                 val movie = Movie(
-                    photo = imageUri.toString(),
+                    photo = movieImageUri.toString(),
                     title = movieTitle,
                     description = movieDescription,
                     year = binding.MovieYear.text.toString(),
@@ -85,16 +81,14 @@ class MovieForm : Fragment() {
                 if(viewModel1.chosenMovie.value == null){
                     viewModel1.addMovie(movie)
                 } else{
-                    movie.id = viewModel1.chosenMovie.value?.id?: 0
+                    movie.id = viewModel1.chosenMovie.value?.id?: 0 // copy movie id
                     viewModel1.updateMovie(movie)
-
                 }
                 findNavController().navigate(R.id.action_movieForm_to_fragment12)
             }
             else {
-                Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.filling_toast, Toast.LENGTH_SHORT).show()
             }
-
         }
         binding.imageBtn.setOnClickListener {
             pickImageLauncher.launch(arrayOf("image/*"))
@@ -103,6 +97,8 @@ class MovieForm : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
+         viewModel1.clearChosenMovie() // Clear the chosen movie when navigating back
+         imageUri = null // Reset the image URI
     }
 
 }
